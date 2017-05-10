@@ -6,7 +6,7 @@ from Crypto import Random
 def encrypt(key, filename):
     chunksize = 64*1024
     basename = os.path.basename(filename)
-    outputFile = os.path.dirname(filename)+"/(encrypted)"+ basename
+    outputFile = os.path.dirname(filename)+"(encrypted)"+ basename
     filesize = str(os.path.getsize(filename)).zfill(16)
     IV = Random.new().read(16)
 
